@@ -1,0 +1,81 @@
++------------------------+         +------------------------+         +------------------------+
+|        Models           |        |        Controllers      |        |         Views           |
+|  (Representa os dados)  |        |  (Lógica de Negócio)    |        |  (Interface do Usuário) |
++------------------------+         +------------------------+         +------------------------+
+| + components/           |        | + APIController.js      |        | + templates/            |
+|   - Cliente.js          |        | + ContaController.js    |        |   - index.html          |
+|   - Conta.js            |        | + ...                   |        | + scripts/              |
+| + ...                   |        | + services/             |        |   - main.js             |
+|                         |        |   - api/                |        | + styles/               |
++------------------------+         |     - index.js          |        |   - main.css            |
+                                   +------------------------+         +------------------------+
+                                              |
+                                              |
+                                    +----------------------+
+                                    |   Services (API)      |
+                                    | + services/           |
+                                    |   - AxiosInstance.js  |
+                                    +----------------------+
+
+
+
+
+Diagrama de Negócio: Banco Horizon
+1. Clientes
+
+Descrição: Usuários que têm contas no banco.
+Interações:
+Abrir Conta
+Consultar Saldo
+Fazer Depósitos
+Realizar Transferências
+Efetuar Saques
+
+2. Funcionários do Banco
+
+Descrição: Pessoal que auxilia na operação do banco.
+Interações:
+Gerenciamento de Contas (Criação, Fechamento)
+Atendimento ao Cliente
+Processamento de Empréstimos
+Auditoria e Controle Interno
+
+3. Processos Bancários
+
+Abertura de Conta:
+Inicia com a solicitação do cliente e finaliza com a aprovação do funcionário.
+Gerenciamento de Contas:
+Monitoramento de saldos, movimentações e fechamento de contas.
+Processamento de Empréstimos:
+Revisão e aprovação de pedidos de empréstimo.
+Atendimento ao Cliente:
+Resolução de problemas e suporte a clientes.
+Transações Bancárias:
+Depósitos, transferências e saques realizados pelos clientes.
+
+4. Sistemas de Suporte
+
+Sistema de Gerenciamento de Contas:
+Descrição: Sistema onde as contas dos clientes são gerenciadas.
+Interações: Consultar saldo, atualizar informações da conta.
+
+Sistema de Pagamento:
+Descrição: Sistema que processa as transferências e pagamentos.
+Interações: Realização de transferências, pagamento de boletos.
+
+Sistema de Segurança:
+Descrição: Sistema que garante a segurança dos dados e transações.
+Interações: Autenticação de usuários, monitoramento de atividades suspeitas.
+
+Como Visualizar
+Clientes e Funcionários do Banco seriam duas entidades principais no diagrama.
+Processos Bancários estariam conectados tanto aos Clientes quanto aos Funcionários do Banco.
+Exemplo: "Abertura de Conta" conecta o Cliente ao Funcionário do Banco.
+Sistemas de Suporte estariam conectados aos Processos Bancários para mostrar quais sistemas suportam quais processos.
+
+Exemplo: "Sistema de Pagamento" está conectado ao processo "Transações Bancárias".
+Representação Gráfica
+Entidades (Clientes, Funcionários): Caixas ou elipses.
+Processos Bancários: Caixas ou elipses menores conectadas às entidades.
+Sistemas de Suporte: Caixas que envolvem ou estão conectadas aos processos.
+Essa é uma estrutura básica para o diagrama de negócios do seu projeto de banco. Se você usar uma ferramenta como Lucidchart, Draw.io, ou mesmo desenhar à mão, essa estrutura poderá ser facilmente visualizada.

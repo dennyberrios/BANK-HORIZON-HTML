@@ -1,0 +1,4 @@
+diagrama de um projeto
+testes 
+como iniciar um projeto
+documentação

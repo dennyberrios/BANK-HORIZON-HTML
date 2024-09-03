@@ -1,0 +1,11 @@
+{
+  "name": "HorizonBank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Danny Berrios Gomes da Silva",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  }
+}

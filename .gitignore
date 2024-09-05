@@ -82,3 +82,9 @@ public/
 # Ignore temporary files
 tmp/
 temp/
+
+# Ignore .txt files
+*.txt
+
+# Ignore 'testeDeInputs' folder
+testeDeInputs/

@@ -3,6 +3,32 @@ const boxCard = document.querySelector('[data-element="conteudo"]');
 const contProfiles = document.querySelector('[data-profile="cont"]');
 const inputSearch = document.querySelector('.form-control');
 
+function removeCards(remove) {
+    remove.innerHTML = ""
+}
+
+function clientNotFound() {
+    const createTag = document.createElement("div");
+    createTag.innerHTML = `
+    <p  class="title text-dark">Cliente não encontrado</p>
+    <p class="paragrafo text-light">Por favor, digite um nome cadastrado.</p>
+    `;
+    createTag.className = "box-client-not-exist bg-info p-5 rounded-pill";
+    return createTag
+}
+
+async function displayClients(clients) {
+    // Limpa a boxCard antes de adicionar novos clientes
+    removeCards(boxCard)
+    if (clients.length === 0) {
+        boxCard.appendChild(clientNotFound())
+    } else {
+        clients.forEach(client => {
+            boxCard.appendChild(cardCreator(client.img, client.name, client.email, client.id));
+        })
+    }
+}
+
 function cardCreator(img, name, email, id) {
     const tagContainer = document.createElement('div');
     const cardElement = `
@@ -35,54 +61,43 @@ function cardCreator(img, name, email, id) {
 }
 
 boxCard.addEventListener("click", async (event) => {
-    const buttonExcluir = event.target.className.split(" ").find(classe => classe === "excluir") === 'excluir';
+    const buttonExcluir = event.target.className.split(" ").includes('excluir');
     if (buttonExcluir) {
         const pegaCardId = event.target.closest('[data-id]');
         let id = pegaCardId.dataset.id;
         await ClientController.deletaClient(id);
+        render()  // Atualiza a lista após excluir
     }
 });
 
-async function search() {
-    const getSearch = inputSearch.value;
-    const data = await ClientController.getClient(`name_like=${getSearch}`);
-
-    boxCard.innerHTML = "";
-
-    const createTag = document.createElement("div");
-    createTag.innerHTML = `
-        <p  class="title text-dark">Cliente não encontrado</p>
-        <p class="paragrafo text-light">Por favor, digite um nome cadastrado.</p>
-    `;
-    createTag.className = "box-client-not-exist bg-info p-5 rounded-pill";
-    
-    if (data[0] === undefined) {
-        boxCard.appendChild(createTag)
-    }
-
-    data.forEach(element => {
-        boxCard.appendChild(cardCreator(element.img, element.name, element.email, element.id))
-    });
+async function searchClients() {
+    const searchQuery = inputSearch.value.trim();
+    const data = await ClientController.getClient(`name_like=${searchQuery}`);
+    displayClients(data)
 }
 
-async function listClient() {
-    ClientController.getClient().then(response => {
-        response.forEach(element => {
-            boxCard.appendChild(cardCreator(element.img, element.name, element.email, element.id))
-            contProfiles.innerHTML = element.id >= 100 ? "99+" : element.id;
-        });
-    });
+async function listAllClient() {
+    const allClients = await ClientController.getClient()
+    displayClients(allClients);
+    contProfiles.innerHTML = allClients.length >= 100 ? "99+" : allClients.length;
 }
 
 const render = async () => {
-    if (inputSearch.value && inputSearch.value === "") {
-        listClient();
-        console.log("true");
+    if (inputSearch.value.trim() === "") {
+        listAllClient();
     } else {
-        search();
+        searchClients();
     }
 }
 
-inputSearch.addEventListener('input', render);
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
 
-render();
+inputSearch.addEventListener('input', debounce(render, 300));
+
+render()

@@ -1,9 +1,9 @@
 import APIController from "./APIController.js";
 
 class ClientController {
-    async getClient() {
+    async getClient(url) {
         try {
-            const clientData = await APIController.fetchData(`/profile`);
+            const clientData = await APIController.fetchData(`/profile?${url}`);
             return clientData;
         } catch (error) {
             console.error({MSG: "Error GET Cliente Details:", error});

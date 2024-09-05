@@ -11,6 +11,12 @@
       "city": "RECIFE",
       "state": "pernambuco",
       "zip": "51330-200",
+      "conta": {
+        "conta": "013",
+        "numero": "1234567",
+        "codigo": "07",
+        "saldo": "375"
+      },
       "id": 1
     },
     {
@@ -101,19 +107,6 @@
       "zip": "10990-300",
       "check": true,
       "id": 8
-    },
-    {
-      "name": "Lauro Lima",
-      "email": "lauro_lima@hotmail.com",
-      "cpf": "111.111.111-90",
-      "rg": "22.333.333-2",
-      "birthDate": "2024-09-03",
-      "address": "IBIRAJUBA",
-      "img": "https://i.ibb.co/tq7mywb/menina.jpg",
-      "city": "RECIFE",
-      "state": "pernambuco",
-      "zip": "51330-200",
-      "id": 9
     }
   ]
 }

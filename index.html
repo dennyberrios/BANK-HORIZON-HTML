@@ -20,6 +20,7 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./app.js" defer></script>
     <title>Bank Horizon | Lista de Usuários</title>
 </head>
 
@@ -43,7 +44,7 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="User Name" aria-label="Search" title="Digite o nome do Usuário.">
                         <button class="btn btn-outline-light" type="submit">Search</button>
                     </form>
                 </div>
@@ -65,8 +66,6 @@
         </section>
     </main>
     <footer></footer>
-    <!-- <script type="module" src="./app.js" defer></script> -->
-    <script type="module" src="./views/Scripts/home.js" defer></script>
 </body>
 
 </html>

@@ -9,3 +9,23 @@ main {
     padding: 10px 15px;
     z-index: 1;
 }
+
+.box-client-not-exist {
+    margin-top: 5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: arial;
+
+    text-align: center;
+}
+
+.box-client-not-exist > .title, .paragrafo {
+    margin: 0;
+}
+
+.box-client-not-exist > .paragrafo {
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    margin-top: 5px;
+}

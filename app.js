@@ -1,4 +1,3 @@
-// Função para carregar o script esoecífico da página
 function loadScript(scriptName) {
     const script = document.createElement('script');
     script.src = `${scriptName}`;

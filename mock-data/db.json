@@ -3,110 +3,29 @@
     {
       "name": "Danny Berrios Gomes da Silva",
       "email": "denny_berrios@hotmail.com",
-      "cpf": "111.111.111-90",
-      "rg": "22.333.333-2",
-      "birthDate": "1995-02-23",
-      "address": "IBIRAJUBA",
-      "img": "https://i.ibb.co/wZkJp20/IMG-20191021-081243745.jpg",
-      "city": "RECIFE",
-      "state": "pernambuco",
-      "zip": "51330-200",
-      "conta": {
-        "conta": "013",
-        "numero": "1234567",
-        "codigo": "07",
-        "saldo": "375"
-      },
-      "id": 1
-    },
-    {
-      "name": "Roberta Albuquerque",
-      "email": "roberta_albuquerque@hotmail.com",
-      "cpf": "123.123.123-99",
-      "rg": "12.333.555-0",
-      "birthDate": "2000-10-30",
-      "img": "https://i.ibb.co/tq7mywb/menina.jpg",
-      "address": "Rua de alguem em algum lugar",
-      "city": "Galo sego",
-      "state": "Minas gerais",
-      "zip": "81.777-200",
-      "check": true,
-      "id": 2
-    },
-    {
-      "name": "Thiago Freitas",
-      "email": "thiago_freitas@hotmail.com",
-      "cpf": "111.111.111-90",
-      "rg": "22.333.333-2",
-      "birthDate": "2024-09-02",
-      "address": "undefined",
-      "img": "https://i.ibb.co/xD6v3gF/menino.jpg",
-      "city": "Algum lugar do mundo",
-      "state": "pernambuco",
-      "zip": "21.333.333",
-      "id": 3
-    },
-    {
-      "name": "Manuela Lira",
-      "email": "manuela_lira@hotmail.com",
-      "img": "https://i.ibb.co/XxmJq0t/borboleta.jpg",
-      "address": "IBIRAJUBA",
-      "city": "RECIFE",
-      "state": "Minas gerais",
-      "zip": "51330-200",
-      "check": true,
-      "id": 4
-    },
-    {
-      "name": "Elizama Vitoria Pinheiro da Silva",
-      "email": "elizpinheiro1116@gmail.com",
-      "img": "https://i.ibb.co/YQr2xcZ/lilika.jpg",
-      "address": "IBIRAJUBA",
-      "city": "RECIFE",
-      "state": "pernambuco",
-      "zip": "51330-200",
-      "check": true,
-      "id": 5
-    },
-    {
-      "name": "Robson Thiago Oliveira da Costa",
-      "email": "robson_oliveira@hotmail.com",
-      "cpf": "111.111.111-90",
-      "rg": "22.333.333-2",
-      "birthDate": "2024-09-03",
-      "address": "algum lugar do mundo",
-      "img": "https://i.ibb.co/8sx9nQd/yuno-kimigawa.jpg",
-      "city": "Araripina",
-      "state": "Minas gerais",
-      "zip": "34.233-100",
-      "id": 6
-    },
-    {
-      "name": "Talita Lima",
-      "email": "talita_lima@hotmail.com",
-      "cpf": "111.111.111-90",
-      "rg": "22.333.333-2",
-      "birthDate": "2024-09-04",
-      "address": "undefined",
-      "img": "https://i.ibb.co/D7FDySj/garota.jpg",
-      "city": "alguam cidade",
-      "state": "pernambuco",
-      "zip": "12.123-123",
-      "id": 7
-    },
-    {
-      "name": "Lauro Lima",
-      "email": "lauro_lima@hotmail.com",
       "cpf": "780.576.552-90",
-      "rg": "81.700.700-9",
-      "birthDate": "2024-08-30",
-      "img": "https://i.ibb.co/sFrgVGM/onibus.jpg",
-      "address": "Rua de alguem em algum lugar",
-      "city": "São Paulo",
-      "state": "Minas gerais",
-      "zip": "10990-300",
-      "check": true,
-      "id": 8
+      "rg": "22.333.333-2",
+      "birthDate": "2024-09-08",
+      "address": "IBIRAJUBA",
+      "img": "https://i.ibb.co/7KK0JBQ/trevis-nagasaki.jpg",
+      "city": "RECIFE",
+      "state": "pernambuco",
+      "zip": "51330-200",
+      "id": 1
+    }
+  ],
+  "account": [
+    {
+      "_accountNumber": "00000001",
+      "_agency": "1234",
+      "_balance": "R$ 900.000,00",
+      "_accountType": "2",
+      "_openingDate": "2024-09-08",
+      "_accountStatus": true,
+      "_creditLimit": "R$ 1.000.000,00",
+      "_verificationDigit": "9",
+      "_clientId": 1,
+      "id": 1
     }
   ]
 }

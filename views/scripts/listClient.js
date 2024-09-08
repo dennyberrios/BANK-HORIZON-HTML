@@ -10,8 +10,11 @@ function removeCards(remove) {
 function clientNotFound() {
     const createTag = document.createElement("div");
     createTag.innerHTML = `
-    <p  class="title text-dark">Cliente não encontrado</p>
-    <p class="paragrafo text-light">Por favor, digite um nome cadastrado.</p>
+        <p  class="title text-dark">Cliente não encontrado</p>
+        <p class="paragrafo text-light w-75 fst-italic">Por favor, cadastre-se e acesse nossos serviços no BANK HORIZON.</p>
+        <div class="card-body">
+            <a href="./views/CadastraClient/cadastraClient.html" class="btn btn-success text-light fs-5">Cadastre-se</a>
+        </div>
     `;
     createTag.className = "box-client-not-exist bg-info p-5 rounded-pill";
     return createTag

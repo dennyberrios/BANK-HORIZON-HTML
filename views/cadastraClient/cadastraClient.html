@@ -96,6 +96,22 @@
                   <label for="inputZip" class="form-label">Cep</label>
                   <input type="text" class="form-control" id="inputZip" required>
                 </div>
+                <div class="col-md-4">
+                  <label for="inputDeposit" class="form-label">Depósito</label>
+                  <input type="text" class="form-control" id="inputDeposit" data-preco="preco" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputCreditLimit" class="form-label">Limite de créditos</label>
+                  <input type="text" class="form-control" id="inputCreditLimit" data-preco="preco" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputAccount" class="form-label">Tipo de conta</label>
+                  <select id="inputAccount" class="form-select" required>
+                    <option selected value="">Escolher...</option>
+                    <option value="1">Poupança</option>
+                    <option value="2">Corrente</option>
+                  </select>
+                </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary btn-form-edita">Sign in</button>
                 </div>
